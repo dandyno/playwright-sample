@@ -1,0 +1,29 @@
+{
+  "name": "playwright-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf reports",
+    "test": "npm run clean && cucumber-js --require-module ts-node/register & ts-node ./src/HTMLreporter.ts",
+    "report": "ts-node ./src/HTMLreporter.ts",
+    "test:tags": "cucumber-js --require-module ts-node/register --tags"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@types/chai": "^5.2.2",
+    "chai": "^6.2.0",
+    "playwright": "^1.55.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@cucumber/pretty-formatter": "^2.3.0",
+    "multiple-cucumber-html-reporter": "^3.9.3",
+    "rimraf": "^6.0.1"
+  }
+}
